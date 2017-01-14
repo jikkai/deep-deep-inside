@@ -6,6 +6,22 @@ const DeepDeepInside = {}
  * @param obj {object} A JavaScript object
  */
 DeepDeepInside.stringify = (obj) => {
+  let result = '{'
+
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      const value = obj[key]
+      if (typeof value === 'number') {
+        result += `"${key}":${value}`
+      } else if (typeof value === 'string') {
+        result += `"${key}":"${value}"`
+      }
+    }
+  }
+
+  result += '}'
+
+  return result
 }
 
 /**
