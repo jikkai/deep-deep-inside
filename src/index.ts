@@ -1,12 +1,9 @@
 import stringify from './utils/stringify'
 import parse from './utils/parse'
 
-interface DDI {
-  stringify: Function
-  parse: Function
-}
-
-export const DeepDeepInside: DDI = {
+const DeepDeepInside: Object = {
   stringify: stringify,
   parse: parse
 }
+
+export default DeepDeepInside

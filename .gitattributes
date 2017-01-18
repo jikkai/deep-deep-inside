@@ -1,2 +1,1 @@
-test/**             linguist-documentation=false
-rollup.config.js    linguist-documentation=false
+test/*              linguist-documentation=false

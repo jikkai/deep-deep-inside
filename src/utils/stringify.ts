@@ -5,11 +5,11 @@
  */
 
 const stringify: Function = (obj: Object) => {
-  let result: String = '{'
+  let result: String = ''
 
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
-      const value = obj[key]
+      const value: any = obj[key]
       if (typeof value === 'string') {
         result += `"${key}":"${value}"`
       } else {
@@ -18,7 +18,7 @@ const stringify: Function = (obj: Object) => {
     }
   }
 
-  result += '}'
+  result = `{${result}}`
 
   return result
 }
