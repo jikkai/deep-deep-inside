@@ -1,8 +1,8 @@
 export default {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   plugins: [
-    require('rollup-plugin-babel')({
-      exclude: 'node_modules/**'
+    require('rollup-plugin-typescript')({
+      typescript: require('typescript')
     }),
     require('rollup-plugin-uglify')()
   ],
