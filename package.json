@@ -8,7 +8,7 @@
     "build": "rollup -c ./rollup.config.js",
     "dev": "rollup -c ./rollup.config.js -w",
     "lint": "tslint -c ./tslint.json ./src/**/*.ts",
-    "test": "mocha ./test/specs/*.spec.js",
+    "test": "mocha ./test/specs/*.spec.ts",
     "prepublish": "npm run build"
   },
   "devDependencies": {
