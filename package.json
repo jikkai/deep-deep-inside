@@ -7,21 +7,19 @@
   "scripts": {
     "build": "rollup -c ./rollup.config.js",
     "dev": "rollup -c ./rollup.config.js -w",
-    "lint": "eslint --ext .js ./src",
+    "lint": "tslint -c ./tslint.json ./src/**/*.ts",
     "test": "mocha ./test/specs/*.spec.js",
     "prepublish": "npm run build"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^3.12.2",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
     "mocha": "^3.2.0",
     "rollup": "^0.41.2",
     "rollup-plugin-typescript": "^0.8.1",
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-watch": "^3.2.2",
+    "tslint": "^4.3.1",
+    "tslint-config-standard": "^2.0.0",
     "typescript": "^2.1.5"
   },
   "dependencies": {}
